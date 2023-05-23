@@ -211,7 +211,7 @@ export const product_create_product_mongoose = (req, res, next) =>{
         name:req.body.name,
         price: req.body.price,
         // productImage:req.file.name
-        productImage:req.file.filename,
+        productImage:(req.file)?req.file.filename:null,
         // productImage:req.file.path
         creationDate:req.body.createdDate,
         updateDate:req.body.updatedDate
