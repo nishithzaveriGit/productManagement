@@ -147,7 +147,6 @@ export const Product = () => {
                 }
                 
                 updateProductById(editedData, updateProductFormData);
-                // updateProductById(editedData, newProductObj); // mongoose
             } else {
                 let newProductFormData = new FormData();
                 for (let [ky, ve] of formData.entries()) {
@@ -301,7 +300,7 @@ export const Product = () => {
                         id="txtSearch"
                         placeholder='Search by name'
                         onChange={handleChange}
-                        style={{ marginTop:'-27px'}}
+                        style={{ marginTop:'-9px'}}
                     />
                 </div>
                 <div className="col-sm-3">

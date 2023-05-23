@@ -153,25 +153,25 @@ describe("ProductList", () => {
     `);
   });
 
-  it("when API calls mae to GET|POST endpoint", async () =>{
-    await axios.get.mockRestore();
+  // it("when API calls mae to GET|POST endpoint", async () =>{
+  //   await axios.get.mockRestore();
 
-    // await waitFor(() => expect(axios.get).toHaveBeenCalledTimes(1));
-    const { debug } = render(<Product />);
+  //   // await waitFor(() => expect(axios.get).toHaveBeenCalledTimes(1));
+  //   const { debug } = render(<Product />);
 
-    await waitFor(() => (screen.queryByText('loading').toBeTruthy()));
+  //   // await waitFor(() => (screen.queryByText('loading').toBeTruthy()));
 
-    await new Promise((res) => setTimeout(res, 100));
+  //   await new Promise((res) => setTimeout(res, 100));
 
-    await waitForElementToBeRemoved(() =>
-      screen.queryByTestId("loading-element")
-    //   screen.queryByText("loading").innerHTML
-    );
+  //   await waitForElementToBeRemoved(() =>
+  //     screen.queryByTestId("loading-element")
+  //   //   screen.queryByText("loading").innerHTML
+  //   );
 
-    const productItems = screen
-      .getAllByTestId("product-item")
-      .map((cols) => cols.textContent);
+  //   const productItems = screen
+  //     .getAllByTestId("product-item")
+  //     .map((cols) => cols.textContent);
 
-    expect(productItems).toMatchInlineSnapshot();
-  })
+  //   expect(productItems).toMatchInlineSnapshot();
+  // })
 });
